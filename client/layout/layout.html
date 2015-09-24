@@ -1,5 +1,9 @@
 <template name="Layout">
-<!--	<div id="body-div"></div>  -->
+
+	<div id="bg_img"></div>
+
+	<div id="wrapper">
+
 	{{#if templatenohome}}
 		<input type="submit" id="back-button" value="Back"/>
 	{{/if}}
@@ -10,4 +14,6 @@
 
 	{{>yield}}
 	
+	</div> <!-- end of wrapper -->
+
 </template>

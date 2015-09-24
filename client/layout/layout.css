@@ -1,17 +1,31 @@
 body
 {
-	background-image:url("apple.jpg");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-/*	background-color: #558dee; */
-	background-color: rgba(0, 132, 71, 0.7);
 	text-align: center;
 	color: #555;
 	font-family: arial, san-serif;
+	background-color: #555;
+	margin:0;
+	padding:0;
 }
 
-input[type=submit] {
+#bg_img {
+	position:fixed;
+	top:0;left:0;
+	width:100%;height:100%;
+	background-image:url("apple.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #555;
+	background-color: rgba(0, 132, 71, 0.7);
+	z-index: 0;
+	opacity: 0.5;
+}
+
+#wrapper {
+	z-index: 1;
+}
+
+input[type=submit],#forgot-password {
 	padding: 15px;
 	color: #fefefe;
 	background: rgba(0,0,0,0.7);
@@ -26,7 +40,7 @@ input[type=submit] {
 	-webkit-transition: all 0.3s;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover,#forgot-password:hover {
 	background: #111;
 }
 
@@ -64,6 +78,7 @@ ul {
 }
 
 #register-list {
+	position: relative;
 	background-color: rgba(200,200,200,0.7);
 	display: inline-block;
 	padding: 20px;
@@ -78,19 +93,3 @@ ul {
 	right:2px;
 }
 
-
-/*
-#body-div
-{
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	width: 100%;
-	height: 100%;
-	position: fixed;   
-	background-color: white;
-	opacity: 0.5;
-	overflow: 
-}
-*/

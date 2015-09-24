@@ -47,10 +47,12 @@
 	<form id="login-form">
 		<ul id="login-list">
 			<li id="item-list-2"> Username </li>
-			<li id="item-list-2"> <input type="text" placeholder="Username" id="username-field" /> </li>
+			<li id="item-list-2"> <input type="text" placeholder="Username" id="username-field" required/> </li>
 			<li id="item-list-2"> Password </li>
 			<li id="item-list-2"> <input type="password" placeholder="Password" id="password-field"/> </li>
-			<li id="item-list-2"> <input type="submit" value="Login" id="login-button" /> <input type="submit" id="forgot-password" value="Forgot password?" /> </li>
+			<li id="item-list-2">
+				<input type="submit" value="Login" id="login-button" /> <span id="forgot-password">Forgot password?</span>
+			</li>
 			<li id="item-list-2"> <label id="labello"> </label> </li>
 		</ul>
 	</form>
@@ -60,27 +62,47 @@
 <template name="Register">
 
 	<ul id="register-list">
-		<li id="item-list-3"> Name </li>
-		<li id="item-list-3"> <input type="text" id="name" placeholder="Name" /> </li>
-		<li id="item-list-3"> Surname </li>
-		<li id="item-list-3"> <input type="text" id="surname" placeholder="Surname" /> </li>
-		<li id="item-list-3"> Username </li>
-		<li id="item-list-3"> <input type="text" id="username" placeholder="Username" /> </li>
-		<li id="item-list-3"> Password </li>
-		<li id="item-list-3"> <input type="password" id="password1" placeholder="Password" /> </li>
-		<li id="item-list-3"> Repeat Password </li>
-		<li id="item-list-3"> <input type="password" id="password2" placeholder="Repeat password" /> </li>
-		<li id="item-list-3"> E-mail </li>
-		<li id="item-list-3"> <input type="email" id="mail" placeholder="e-mail" /> </li>
-		<li id="item-list-3"> Name of the farm </li>
-		<li id="item-list-3"> <input type="text" id="farm-name" placeholder="Farm's name" /> </li>
-		<li id="item-list-3"> Number of farm </li>
-		<li id="item-list-3"> <input type="number" id="farm-number" placeholder="Farm's number" /> </li>
-		<li id="item-list-3"> Farm place </li>
-		<li id="item-list-3"> <input type="text" id="farm-place" placeholder="Farm's place" /> </li>
-		<li id="item-list-3"> Type of production </li>
-		<li id="item-list-3"> <input type="text" id="production" placeholder="Production" /> </li>
-		<li id="item-list-3"> <input type="submit" id="confirm-registration" value="Register" /> </li>
+		<li class="item-list-3">
+			<label>Name</label>
+			<input type="text" id="name" placeholder="Name" />
+		</li>
+		<li class="item-list-3">
+			<label>Surname</label>
+			<input type="text" id="surname" placeholder="Surname" />
+		</li>
+		<li class="item-list-3">
+			<label>Username</label>
+			<input type="text" id="username" placeholder="Username" />
+		</li>
+		<li class="item-list-3">
+			<label>Password</label>
+			<input type="password" id="password1" placeholder="Password" />
+		</li>
+		<li class="item-list-3">
+			<label>Repeat Password</label>
+			<input type="password" id="password2" placeholder="Repeat password" />
+		</li>
+		<li class="item-list-3">
+			<label>E-mail</label>
+			<input type="email" id="mail" placeholder="e-mail" />
+		</li>
+		<li class="item-list-3">
+			<label>Name of the farm</label>
+			<input type="text" id="farm-name" placeholder="Farm's name" />
+		</li>
+		<li class="item-list-3">
+			<label>Number of farm</label>
+			<input type="number" min="1" maxlength="16" size="16" id="farm-number" placeholder="Farm's number" />
+		</li>
+		<li class="item-list-3">
+			<label>Farm place</label>
+			<input type="text" id="farm-place" placeholder="Farm's place" />
+		</li>
+		<li class="item-list-3">
+			<label>Type of production</label>
+			<input type="text" id="production" placeholder="Production" />
+		</li>
+		<li class="item-list-3"> <input type="submit" id="confirm-registration" value="Register" /> </li>
 	</ul> 
 
 </template>
