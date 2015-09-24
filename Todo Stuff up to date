@@ -1,0 +1,25 @@
+Collections:
+	-Accounts
+	-Products
+	-Apple
+	-Milk
+	-Wine
+	-Honey
+	-Strawberry (fragole)
+	-Mushroom
+	-Blueberries (mirtilli neri)
+	-Grapefruit (uva)
+
+Problems:
+	-Notifications
+	-Design (per ultimo)
+	-Protection
+	-Remove insecure package and fix stuff
+	-Increase/decrease management system
+	-Search queries
+	-Profile Producer
+	-Animation stuff
+	-Fill collection's stuff
+	
+Done Stuff:
+	-Registration on the call to the server works without any problem

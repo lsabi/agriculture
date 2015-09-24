@@ -1,0 +1,17 @@
+body
+{
+	background-image:url("back.jpg");  
+}
+
+#logout-button
+{
+	position: fixed;
+	top:2px;
+	right:2px;
+}
+
+#notifications-part
+{
+	position:fixed;
+	bottom:0px;
+}
