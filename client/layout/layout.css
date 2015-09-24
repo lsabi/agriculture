@@ -1,11 +1,11 @@
 body
 {
-	background-image:url("back.jpg");
+	background-image:url("apple.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 /*	background-color: #558dee; */
-	background-color: rgba(90,150,0,0.7);
+	background-color: rgba(0, 132, 71, 0.7);
 	text-align: center;
 	color: #555;
 	font-family: arial, san-serif;
