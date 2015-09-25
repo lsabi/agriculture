@@ -1,5 +1,6 @@
 if(Meteor.isClient)
 {
+
 	Template.Layout.helpers
 	({
 		"templatenohome":function()
@@ -22,5 +23,8 @@ if(Meteor.isClient)
 			Router.go("/");
 			return ;
 		}
+
+		// add event to refresh alert contents
 	});
+
 }

@@ -29,12 +29,12 @@ li {
 	margin-top: 20%;
 }
 
-/* subcribe form stuff */
+/* subcribe and add form stuff */
 
 .item-list-3 label{
 	display: inline-block;
 	width: 150px;
 }
-.item-list-3 input{
+.item-list-3 input, .item-list-3 select{
 	width: 230px;
 }

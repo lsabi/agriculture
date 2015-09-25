@@ -1,5 +1,18 @@
 if (Meteor.isClient) 
 {
+
+	// Notification function
+	// Call notify("") with the message to notify to show an alert
+	function notify(newAlert){
+		// change the alert message
+		document.getElementById("alert-content").innerHTML = newAlert;
+		// alert animations
+		var box = document.getElementById("alert-wrapper");
+		box.className = "visible";
+		setTimeout(function(){ box.className = "hidden" }, 2500);
+	}
+
+
   Template.Home.events
   ({
     "click #login":function(event,template)
@@ -40,14 +53,16 @@ if (Meteor.isClient)
 
   		if(!user)
   		{
-  			console.log("invalid user!");
-  			return ;
+  			console.log("invalid user!"); // better -> "User field is empty"
+  			notify("User field is empty");
+        return ;
   		}
   		
   		if(!pass)
   		{
-  			console.log("invalid password!");
-  			return ;
+  			console.log("invalid password!"); // better -> "Password field is empty"
+  			notify("Password field is empty");
+        return ;
   		}
 
 	console.log(user+" "+pass);
@@ -59,11 +74,11 @@ if (Meteor.isClient)
   				console.log("err");
   				template.find("#username-field").value = "";
   				template.find("#password-field").value = "";
-  				return ;
+  				notify("Oops... it seems you are not registered");
+          return ;
   			}
   			else
   			{
-  				//Router.go("/Add");
   				return ;
   			}
   		});
@@ -113,10 +128,12 @@ if (Meteor.isClient)
 /*
       if(!name.match("/^[A-Za-z]+$/"))
         //Notification
+        notify("Not allowed char in Name field");
         return ;
 
       if(!surname.match("/^[A-Za-z]+$/"))
         //Notification
+        notify("Not allowed char in Surname field");
         return ;
 
       if(!username.match("/^[A-Za-z]+$/") || username.toLowerCase() == "admin")
@@ -125,30 +142,37 @@ if (Meteor.isClient)
 
       if(!Meteor.call("check-username",username))
         //Notification
+        notify("Not allowed char in Name field");
         return ;
 
       if(!password1.length>7 && password1.length<17)
         //Notification
+        notify("Password must be min 8 and max 17 length");
         return ;
 
       if(!password1 == password2)
         //Notification
+        notify("Password does not match");
         return ;
 
       if(!email.match("/^[A-Z0-9'.1234z_%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/"))
         //Notification
+        notify("Wrong mail format");
         return ;
 
       if(!farmname.match("/^[A-Za-z]+$/"))
         //Notification
+        notify("Wrong farm name");
         return ;
 
       if(!farmnumber.match("/^[0-9]+$/"))
         //Notification
+        notify("Wrong Farm number format");
         return ;
 
       if(!Meteor.call("check-farm",farmname,farmnumber))
         //Notification
+        notify("Farm name and Farm code does not match");
         return ;   
         */
       console.log("Preparing to enter the register method on the server");
@@ -158,13 +182,15 @@ if (Meteor.isClient)
         if(err)
         {
         	//Notification
-          console.log("A problem occurred while creating the account");
+          	console.log("A problem occurred while creating the account");
+          	notify("A problem occurred while creating the account");
           	return ;
         }
         else
         {
         	//Notification
           	Router.go("/Login");
+          	notify("Registration success now log in");
           	return ;
         }
       });

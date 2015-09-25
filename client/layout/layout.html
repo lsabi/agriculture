@@ -1,18 +1,27 @@
 <template name="Layout">
 
+	<!-- background picture -->
 	<div id="bg_img"></div>
+
+	<!-- alerts box -->
+	<div id="alert-wrapper" class="hidden">
+		<!-- <span id="alert-icon"></span> -->
+		<div id="alert-container">
+			<span id="alert-content">Default alert</span>
+		</div>
+	</div>
 
 	<div id="wrapper">
 
-	{{#if templatenohome}}
-		<input type="submit" id="back-button" value="Back"/>
-	{{/if}}
+		{{#if templatenohome}}
+			<input type="submit" id="back-button" value="Back"/>
+		{{/if}}
 
-	{{#if currentUser}}
-		<input type="submit" id="logout-button" value="Log out"/>
-	{{/if}}
+		{{#if currentUser}}
+			<input type="submit" id="logout-button" value="Log out"/>
+		{{/if}}
 
-	{{>yield}}
+		{{>yield}}
 	
 	</div> <!-- end of wrapper -->
 

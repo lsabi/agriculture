@@ -22,10 +22,11 @@ body
 }
 
 #wrapper {
-	z-index: 1;
+	z-index: 999;
+	margin-top:70px;
 }
 
-input[type=submit],#forgot-password {
+input[type=submit],#forgot-password, #help-add {
 	padding: 15px;
 	color: #fefefe;
 	background: rgba(0,0,0,0.7);
@@ -40,11 +41,12 @@ input[type=submit],#forgot-password {
 	-webkit-transition: all 0.3s;
 }
 
-input[type=submit]:hover,#forgot-password:hover {
+input[type=submit]:hover,#forgot-password:hover,#help-add:hover {
 	background: #111;
 }
 
-input[type=text],input[type=password],input[type=number],input[type=email] {
+select,input[type=text],input[type=password],input[type=number],input[type=email] {
+	position: relative;
 	margin-bottom: 20px;
 }
 
@@ -57,7 +59,7 @@ input[type=text],input[type=password],input[type=number],input[type=email] {
 
 #back-button {
 	position: absolute;
-	top: 0; left: 0;
+	top: 0; left: 20px;
 }
 
 #login-form {
@@ -77,7 +79,7 @@ ul {
 	padding: 0;
 }
 
-#register-list {
+#register-list,#add-list {
 	position: relative;
 	background-color: rgba(200,200,200,0.7);
 	display: inline-block;
@@ -88,8 +90,54 @@ ul {
 
 #logout-button
 {
-	position: fixed;
+	position: absolute;
 	top:2px;
-	right:2px;
+	right:20px;
 }
 
+/* Option template */
+
+#option-wrapper{
+	position: relative;
+	text-align: left;
+}
+
+/* Search template*/
+
+#search-wrapper input{
+	width: 280px;
+}
+
+/* Notification/Alert stuff */
+
+.hidden {
+	opacity:0;
+	z-index: 0;
+}
+
+.visible {
+	opacity: 1;
+	z-index: 999999;
+}
+
+#alert-wrapper {
+	position: fixed;
+	top:2px;left:calc(50% - 100px);
+	min-width: 200px;
+	transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+}
+
+#alert-container{
+	padding: 20px;
+	background-color: #ffff00;
+	opacity:0.8;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	transition: all 0.7s;
+	-webkit-transition: all 0.7s;
+}
+
+#alert-container:hover{
+	opacity:1;
+}
