@@ -1,0 +1,40 @@
+body
+{
+/*	opacity: 0.85;   */
+	color: black;
+}
+
+#list-item
+{
+	float: left;
+	list-style-type: none;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+li {
+	list-style-type: none;
+}
+
+#login-list
+{
+	top:0px;
+}
+
+#home-stuff
+{
+	width: 20%;
+	margin-left: 40%;
+	margin-right: 40%;
+	margin-top: 20%;
+}
+
+/* subcribe and add form stuff */
+
+.item-list-3 label{
+	display: inline-block;
+	width: 150px;
+}
+.item-list-3 input, .item-list-3 select{
+	width: 230px;
+}
