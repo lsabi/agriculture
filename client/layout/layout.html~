@@ -1,0 +1,9 @@
+<template name="Layout">
+
+	{{#if currentUser}}
+		<input type="submit" id="logout-button" value="Log out"/>
+	{{/if}}
+	{{>yield}}
+	<div id="notifications-part"> </div>
+	
+</template>

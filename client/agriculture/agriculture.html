@@ -1,0 +1,147 @@
+<head>
+  <title>Agriculture Hub</title>
+  <script src="/notification.js"></script>
+</head>
+
+<template name="Home">
+
+	<div id="home-stuff">
+		{{#if currentUser}}
+			<input type="submit" id="add-button" value="Add" />
+		{{else}}
+			<input type="submit" id="login" value="Login" />
+		{{/if}}
+		<input type="submit" id="search" value="Search" />
+		{{#if currentUser}}
+			<input type="submit" id="options-button" value="Options" />
+		{{else}}
+			<input type="submit" id="register" value="Register" />
+		{{/if}}
+	</div>
+	
+</template>
+
+<template name='Add'>
+	
+	<!-- add confimition panel (maybe with preview)-->
+
+	<form id="add-form">
+		<ul id="add-list">
+			<li class="item-list-3">
+				<label>Product category</label>
+				<select id="product-categories" name="product-category">
+					<option>Apples</option>
+					<option>Milk</option>
+					<option>Mashroom</option>
+					<option>Wine</option>
+					<option>Honey</option>
+					<option>Strawberry</option>
+					<option>Blueberries</option>
+					<option>Grapefruit</option>
+				</select>
+			</li>
+			<li class="item-list-3">
+				<label>Product</label>
+				<select name="product-type">
+					<!-- add options dinamically with js -->
+					<!-- <option></option> -->
+				</select>
+			</li>
+			<li class="item-list-3">
+				<label>Quantity in Kg</label>
+				<input type="number" min="1" step="0.5" placeholder="Quantity (Kg)" id="qunatity-field" required/>
+			</li>
+			<li id="item-list-3">
+				<input type="submit" value="Add" id="add-button" /> <span id="help-add">Help</span>
+			</li>
+		</ul>
+	</form>
+
+</template>
+
+<template name="Options">
+	
+	<div id="option-wrapper">
+		<ul>
+			<li id="options-item"> <input type="submit" value="Change identification stuff" id="change-owner" /> </li>
+			<li id="options-item"> <input type="submit" id="change-password" value="Change password" /> </li>
+			<li id="options-item"> <input type="submit" value="Add/change production"/> </li>
+		</ul>
+	</div>
+
+</template>
+
+<template name="Search">
+
+	<div id="search-wrapper">
+		<input type="text" id="search" placeholder="Search agriculture company or products" autofocus="true"/>
+	</div>
+
+</template>
+
+<template name="Login">
+
+	<form id="login-form">
+		<ul id="login-list">
+			<li id="item-list-2"> Username </li>
+			<li id="item-list-2"> <input type="text" placeholder="Username" id="username-field" required/> </li>
+			<li id="item-list-2">Password</li>
+			<li id="item-list-2">
+				<input type="password" placeholder="Password" id="password-field" required/>
+			</li>
+			<li id="item-list-2">
+				<input type="submit" value="Login" id="login-button" /> <span id="forgot-password">Forgot password?</span>
+			</li>
+			<li id="item-list-2"> <label id="labello"> </label> </li>
+		</ul>
+	</form>
+	
+</template>
+
+<template name="Register">
+
+	<ul id="register-list">
+		<li class="item-list-3">
+			<label>Name</label>
+			<input type="text" id="name" placeholder="Name" required/>
+		</li>
+		<li class="item-list-3">
+			<label>Surname</label>
+			<input type="text" id="surname" placeholder="Surname" required />
+		</li>
+		<li class="item-list-3">
+			<label>Username</label>
+			<input type="text" id="username" placeholder="Username" required/>
+		</li>
+		<li class="item-list-3">
+			<label>Password</label>
+			<input type="password" id="password1" placeholder="Password" required/>
+		</li>
+		<li class="item-list-3">
+			<label>Repeat Password</label>
+			<input type="password" id="password2" placeholder="Repeat password" required/>
+		</li>
+		<li class="item-list-3">
+			<label>E-mail</label>
+			<input type="email" id="mail" placeholder="e-mail" required/>
+		</li>
+		<li class="item-list-3">
+			<label>Name of the farm</label>
+			<input type="text" id="farm-name" placeholder="Farm's name" required/>
+		</li>
+		<li class="item-list-3">
+			<label>Number of farm</label>
+			<input type="number" min="1" maxlength="16" size="16" id="farm-number" placeholder="Farm's number" />
+		</li>
+		<li class="item-list-3">
+			<label>Farm place</label>
+			<input type="text" id="farm-place" placeholder="Farm's place" />
+		</li>
+		<li class="item-list-3">
+			<label>Type of production</label>
+			<input type="text" id="production" placeholder="Production" />
+		</li>
+		<li class="item-list-3"> <input type="submit" id="confirm-registration" value="Register" /> </li>
+	</ul> 
+
+</template>
