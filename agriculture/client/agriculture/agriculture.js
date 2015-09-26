@@ -118,11 +118,37 @@ if (Meteor.isClient)
 
   Template.Search.events
   ({
-    "keyup #search":function(event,template)
+
+// This functions aee needed in order to change the value of the search inputs, so that when we run Session.get we get the right value
+
+    "keyup #search":function(event, template)
     {
     //	apple.insert({id:this.userId,production:"500",year:"2015",quantity:"500"});
     //	console.log(this.userId);
-      return Session.set("#search",event.target.value);
+//    console.log(event.target.value);
+      Session.set("Search",event.target.value);
+      return ;
+    },
+
+    "change #Category":function(event, template)
+    {
+//    console.log(event.target.value);
+      Session.set("Category",event.target.value);
+      return ;
+    },
+
+    "change #Year":function(event, template)
+    {
+//    console.log(event.target.value);
+      Session.set("Year",event.target.value);
+      return ;
+    },
+
+    "change #Place":function(event, template)
+    {
+//    console.log(event.target.value);
+      Session.set("Place",event.target.value);
+      return ;
     }
   });
 
@@ -143,9 +169,9 @@ if (Meteor.isClient)
           farmplace = template.find("#farm-place").value,
           productiontype = template.find("#production").value; 
 
-        name = name.charAt(0).toUpperCase() + name.substr(1);
-        surname = surname.charAt(0).toUpperCase() + surname.substr(1);
-        farmname = farmname.charAt(0).toUpperCase() + farmname.substr(1);
+      name = name.charAt(0).toUpperCase() + name.substr(1);
+      surname = surname.charAt(0).toUpperCase() + surname.substr(1);
+      farmname = farmname.charAt(0).toUpperCase() + farmname.substr(1);
 
       if(!name.match("/^[A-Za-z]+$/"))
       {
