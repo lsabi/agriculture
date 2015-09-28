@@ -1,0 +1,244 @@
+body
+{
+	text-align: center;
+	color: #555;
+	font-family: arial, san-serif;
+	background-color: #555;
+	margin:0;
+	padding:0;
+	font-size: 16px;
+}
+
+#bg_img {
+	position:fixed;
+	top:0;left:0;
+	width:100%;height:100%;
+	background-image:url("apple.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #555;
+	background-color: rgba(0, 132, 71, 0.7);
+	z-index: 0;
+	opacity: 0.5;
+}
+
+#wrapper {
+	z-index: 999;
+	margin-top:70px;
+}
+
+input[type=submit],#forgot-password, #help-add, #loggedUser {
+	padding: 15px;
+	color: #fefefe;
+	background: rgba(0,0,0,0.7);
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin: 5px;
+	box-shadow: 0 0 3px #555;
+	-webkit-box-shadow: 0 0 3px #555;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+}
+
+input[type=submit]:hover,#forgot-password:hover,#help-add:hover,#loggedUser:hover {
+	background: #111;
+}
+
+select,input[type=text],input[type=password],input[type=number],input[type=email] {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+#home-stuff {
+	position: absolute;
+	width: 100%;
+	margin: auto;
+	top: calc(50% - 30px);
+}
+
+#login-form {
+	display: inline-block;
+	position: absolute;
+	top: calc(50% - 125px);
+	left: calc(50% - 160px);
+	height: 250px;
+	width: 320px;
+	background-color: rgba(200,200,200,0.7);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+ul {
+	margin: 20px;
+	padding: 0;
+}
+
+#register-list,#add-list {
+	position: relative;
+	background-color: rgba(200,200,200,0.7);
+	display: inline-block;
+	padding: 20px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+
+#back-button {
+	position: absolute;
+	top: 5px; left: 20px;
+	margin: 0px !important;
+}
+
+#loggedUser-wrapper {
+	position: absolute;
+	top: 5px; right:20px;
+}
+
+#logout-button,#loggedUser {
+	display: inline-block;
+	margin: 0px !important;
+}
+
+#loggedUser a {
+	display:block;
+	width:100%;
+	height:100%;
+	text-decoration: none;
+	color: #fbfbfb;
+}
+
+
+/* Option template */
+
+#option-wrapper{
+	position: relative;
+	text-align: left;
+}
+
+/* Search template*/
+
+#search-wrapper{
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: left;
+}
+
+#search-wrapper input {
+	padding: 15px;
+	width: 280px;
+	margin-right: 50px;
+}
+
+#search-filters select {
+	padding: 10px;
+	background-color: #fafafa;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid #fafafa;
+	overflow: hidden;
+}
+
+#search-filters option {
+	padding: 5px;
+	appearance: none;
+}
+
+#search-filters {
+	display: inline-block;
+}
+
+#result-wrapper {
+	position: relative;
+	z-index:99;
+	background-color: rgba(200,200,200,0.7);	
+	padding: 1px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.result-element {
+	background-color: #fafafa;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 15px;
+	margin: 15px;
+}
+
+#r_img {
+	display: inline-block;
+	width: 90px;
+	height: 90px;
+	background-size: auto 100%;
+}
+
+#r_product, #r_description, #r_quantitybox {
+	display: inline-block;
+	height: 90px;
+	vertical-align: top;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+#r_product {
+	min-width: 200px;
+}
+
+#r_description, #r_quantitybox {
+	width: 20%;
+}
+
+.result-element span {
+	display: block;
+}
+
+#r_name, #r_quantity {
+	font-size: 22px;
+	color: #111;
+}
+
+#r_category {
+	color: #777;
+}
+
+#r_description span {
+	margin-bottom: 15px;
+}
+
+/* Notification/Alert stuff */
+
+.hidden {
+	opacity:0;
+	z-index: 0;
+}
+
+.visible {
+	opacity: 1;
+	z-index: 999999;
+}
+
+#alert-wrapper {
+	position: fixed;
+	top:2px;left:calc(50% - 120px);
+	width: 240px;
+	font-size: 15px;
+	line-height:20px;
+	transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+}
+
+#alert-container{
+	padding: 10px;
+	text-align: left;
+	background-color: #ffff00;
+	opacity:0.8;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	transition: all 0.7s;
+	-webkit-transition: all 0.7s;
+}
+
+#alert-container:hover{
+	opacity:1;
+}

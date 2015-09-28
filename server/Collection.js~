@@ -1,0 +1,31 @@
+apple = new Mongo.Collection("apple");
+
+wine = new Mongo.Collection("wine");
+
+milk = new Mongo.Collection("milk");
+
+Meteor.publish("apple",function()
+{
+	if(Meteor.userId)
+	//	return [apple.findOne({_id:this.userId}) && apple.find({production:1,year:1,quantity:1})];
+	//else
+		return apple.find({production:1,year:1,quantity:1});
+});
+
+Meteor.publish("wine",function()
+{
+	return wine.find({production:1,year:1,quantity:1});
+});
+
+Meteor.publish("milk", function()
+{
+	return milk.find({production:1,year:1,quantity:1});
+});
+
+Meteor.publish("Accounts",function()
+{
+	if(Meteor.userId())
+		return Meteor.users.find({_id:this.userId});
+	else
+		return null;
+});
